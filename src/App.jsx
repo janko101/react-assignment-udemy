@@ -29,14 +29,16 @@ class App extends Component {
     return (
       <div className="App">
         <h2>1st Assignment</h2>
-        <UserOutput
+        <UserOutput userName={this.state.userNames[0].userName} />
+        <UserInput
           userName={this.state.userNames[0].userName}
+          changed={this.changeFirstUserNameHandler}
         />
-        <UserInput changed={this.changeFirstUserNameHandler} />
-        <UserOutput
+        <UserOutput userName={this.state.userNames[1].userName} />
+        <UserInput
           userName={this.state.userNames[1].userName}
+          changed={this.changeSecondUserNameHandler}
         />
-        <UserInput changed={this.changeSecondUserNameHandler} />
       </div>
     );
   }
